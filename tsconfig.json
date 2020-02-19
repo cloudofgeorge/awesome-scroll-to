@@ -1,11 +1,14 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "declaration": true,
-    "outDir": "./lib",
-    "strict": true
-  },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+	"compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+		"rootDir": "src",
+		"declaration": true,
+		"outDir": "./lib",
+		"strict": true,
+		"lib": ["es2017", "es7", "es6", "dom"],
+		"sourceMap": true,
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "**/__tests__/*"]
 }

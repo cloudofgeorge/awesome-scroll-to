@@ -1,0 +1,34 @@
+{
+	"name": "awesome-scroll-to",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc",
+		"prepare" : "npm run build",
+		"prettier:check": "prettier --config ./.prettierrc --list-different \"src/**/*{.ts,.tsx,.js,.json}\"",
+		"prettier:fix": "prettier --config ./.prettierrc --write \"src/**/*{.ts,.tsx,.js,.json,.css}\"",
+		"lint:ts": "eslint 'src/**/*.{js,ts,tsx}'",
+		"fix:ts": "eslint 'src/**/*.{js,ts,tsx}' --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cloudofgeorge/awesome-scroll-to.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/cloudofgeorge/awesome-scroll-to/issues"
+	},
+	"homepage": "https://github.com/cloudofgeorge/awesome-scroll-to#readme",
+	"files": [
+		"lib/**/*"
+	],
+	"devDependencies": {
+		"@typescript-eslint/parser": "^2.20.0",
+		"eslint": "^6.8.0",
+		"prettier": "^1.19.1",
+		"typescript": "^3.7.5"
+	}
+}

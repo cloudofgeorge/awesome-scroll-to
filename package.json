@@ -4,7 +4,8 @@
 	"description": "",
 	"main": "lib/index.js",
 	"scripts": {
-		"build": "tsc",
+		"build": "rm -rf ./lib && tsc --declaration --outDir ./lib --moduleResolution Node --project ./tsconfig.json",
+		"build:docs": "rm -rf ./docs && parcel build index.html --out-dir ./docs --public-url ./",
 		"prettier:check": "prettier --config ./.prettierrc --list-different \"src/**/*{.ts,.tsx,.js,.json}\"",
 		"prettier:fix": "prettier --config ./.prettierrc --write \"src/**/*{.ts,.tsx,.js,.json,.css}\"",
 		"lint:ts": "eslint 'src/**/*.{js,ts,tsx}'",
@@ -37,11 +38,19 @@
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^2.20.0",
 		"@typescript-eslint/parser": "^2.20.0",
+		"cssnano": "^4.1.10",
 		"eslint": "^6.8.0",
 		"eslint-config-prettier": "^6.7.0",
 		"eslint-plugin-import": "^2.18.2",
 		"eslint-plugin-prettier": "^3.1.1",
 		"prettier": "^1.19.1",
 		"typescript": "^3.7.5"
-	}
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not op_mini all",
+		"ie 10",
+		"ie 11"
+	]
 }

@@ -1,7 +1,7 @@
 /**
  *	Easing - EaseInOut
  */
-export const makeEaseInOut = (timingFn: {
+export const easeInOut = (timingFn: {
 	(timingFraction: number): number;
 	(timingFraction: number): number;
 	(arg0: number): number;

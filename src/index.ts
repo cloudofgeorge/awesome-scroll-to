@@ -18,7 +18,7 @@ type Options = {
  * awesomeScrollTo(document.documentElement, { offset: { left: 0, top: 300 } })
  */
 
-export function awesomeScrollTo(element: HTMLElement, { offset, duration = 600, animation = 'easeInOut' }: Options) {
+export function awesomeScrollTo(element: HTMLElement, { offset, duration = 600, animation = 'linear' }: Options) {
 	/**
 	 * Calculate value for top | left
 	 */
@@ -48,4 +48,10 @@ export function awesomeScrollTo(element: HTMLElement, { offset, duration = 600, 
 			scrollDraw(progress);
 		},
 	});
+}
+
+const WINDOW_EXISTS = typeof window !== 'undefined';
+
+if (WINDOW_EXISTS) {
+	(window as any).awesomeScrollTo = awesomeScrollTo;
 }

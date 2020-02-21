@@ -27,7 +27,7 @@
 		"scroll"
 	],
 	"author": "cloudofgeorge",
-	"license": "ISC",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/cloudofgeorge/awesome-scroll-to/issues"
 	},

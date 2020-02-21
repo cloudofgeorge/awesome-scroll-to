@@ -3,11 +3,11 @@
 [![npm version](https://img.shields.io/npm/v/awesome-scroll-to.svg?style=flat-square)](https://www.npmjs.com/package/awesome-scroll-to)
 [![npm downloads](https://img.shields.io/npm/dm/awesome-scroll-to.svg?style=flat-square)](https://www.npmjs.com/package/awesome-scroll-to)
 
-Lightweight 676B (GZIPPED) scroll to function. Scrolls your Document or any other DOM element. 
+Lightweight 676B (GZIPPED) scroll to function. Scrolls your Document or any other DOM element.
 
 ## Demo
 
-See the [DEMO](https://stanko.github.io/awesome-scroll-to/)
+See the [DEMO](http://testfortest.ru/awesome-scroll-to/)
 
 ## Features
 

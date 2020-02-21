@@ -49,9 +49,3 @@ export function awesomeScrollTo(element: HTMLElement, { offset, duration = 600, 
 		},
 	});
 }
-
-const WINDOW_EXISTS = typeof window !== 'undefined';
-
-if (WINDOW_EXISTS) {
-	(window as any).awesomeScrollTo = awesomeScrollTo;
-}

@@ -24,7 +24,9 @@
 	},
 	"types": "lib/index.d.ts",
 	"keywords": [
-		"scroll"
+		"scroll",
+		"scrolling",
+		"animation"
 	],
 	"author": "cloudofgeorge",
 	"license": "MIT",

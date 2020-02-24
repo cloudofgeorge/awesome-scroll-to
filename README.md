@@ -43,7 +43,7 @@ awesomeScrollTo(document.documentElement, { offset: { top: 300 } }).then(() => {
 awesomeScrollTo(document.querySelector('.scroll-content'), { offset: { top: 200 } });
 
 // Scroll diagonally
-awesomeScrollTo(document.querySelector('.scroll-content'), { offset: { top: 600, left: 600} });
+awesomeScrollTo(document.querySelector('.scroll-content'), { offset: { top: 600, left: 600 } });
 
 // Scroll to ellement
 const elementPosition = document.querySelector('.block-to-scroll').getBoundingClientRect().top;

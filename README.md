@@ -14,6 +14,8 @@ See the [DEMO](http://testfortest.ru/awesome-scroll-to/)
 * Function as a Promise
 * Types for TypeScript
 * Awesome API
+* No Window scroll
+* Cross Browser
 
 ## Usage
 
@@ -28,9 +30,47 @@ Use into your App
 ```javascript
 import {awesomeScrollTo} from 'awesome-scroll-to';
 
-// It returns a promise which will be resolved when scroll animation is finished
+// Returns a promise which will be resolved when scroll animation is finished
 
-awesomeScrollTo(document.documentElement, { offset: { left: 0, top: 300 } }).then(() => {
+// Examples:
+
+// Scroll by document
+awesomeScrollTo(document.documentElement, { offset: { top: 300 } }).then(() => {
   console.log('Animation scroll is done')
 });
+
+// Scroll by container
+awesomeScrollTo(document.querySelector('.scroll-content'), { offset: { top: 200 } });
+
+// Scroll diagonally
+awesomeScrollTo(document.querySelector('.scroll-content'), { offset: { top: 600, left: 600} });
+
+// Scroll to ellement
+const elementPosition = document.querySelector('.block-to-scroll').getBoundingClientRect().top;
+awesomeScrollTo(document.documentElement, {offset: {top: elementPosition}})
+
 ```
+
+## Options
+
+```javascript
+const options = {
+	offset: {
+		top?: 0,
+		left?: 0
+	},
+	duration: 600,
+	animation: 'linear'
+}
+```
+
+#### Animations
+
+```javascript
+'linear' | 'easeInOut' | 'easeOut'
+```
+
+## Browser support
+
+All modern browsers
+

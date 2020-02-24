@@ -28,7 +28,7 @@ npm install awesome-scroll-to
 Use into your App
 
 ```javascript
-import {awesomeScrollTo} from 'awesome-scroll-to';
+import { awesomeScrollTo } from 'awesome-scroll-to';
 
 // Returns a promise which will be resolved when scroll animation is finished
 

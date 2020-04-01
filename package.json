@@ -22,6 +22,17 @@
 		"type": "git",
 		"url": "git+https://github.com/cloudofgeorge/awesome-scroll-to.git"
 	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged && npm run prettier && git add",
+			"pre-push": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{ts,js}": [
+			"npm run lint:all"
+		]
+	},
 	"types": "lib/index.d.ts",
 	"keywords": [
 		"scroll",

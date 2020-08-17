@@ -21,7 +21,7 @@ Install from NPM
 npm install awesome-scroll-to
 ```
 
-Use into your App
+#### Use into your App
 
 ```javascript
 import { awesomeScrollTo } from 'awesome-scroll-to';
@@ -92,10 +92,6 @@ awesomeScrollTo(
 | `"easeInOutQuad"` |
 | `"easeInOutQuart"` |
 | `"easeInOutQuint"` |
-
-```javascript
-'linear' | 'easeInOutCubic' | 'easeInOutQuad' | 'easeInOutQuart' | 'easeInOutQuint';
-```
 
 ## Browser support
 

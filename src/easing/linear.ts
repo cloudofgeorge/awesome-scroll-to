@@ -1,6 +1,5 @@
 /**
  *	Easing - linear
  */
-export const linear = (t: (timingFunc: number) => number) => {
-	return t;
-};
+
+export const linear = (t: number) => t * t;

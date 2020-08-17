@@ -1,13 +1,15 @@
-import { makePower } from './make-power';
 import { linear } from './linear';
-import { easeOut } from './ease-out';
-
-const power = makePower(2);
+import { easeInOutCubic } from './ease-in-out-cubic';
+import { easeInOutQuad } from './ease-in-out-quad';
+import { easeInOutQuart } from './ease-in-out-quart';
+import { easeInOutQuint } from './ease-in-out-quint';
 
 export const easing = {
-	linear: linear(power),
-	easeInOut: easeOut(power),
-	easeOut: easeOut(power),
+	linear,
+	easeInOutCubic,
+	easeInOutQuad,
+	easeInOutQuart,
+	easeInOutQuint,
 };
 
-export type Easing = typeof easing;
+export type Easing = keyof typeof easing;

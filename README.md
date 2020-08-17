@@ -3,19 +3,15 @@
 [![npm version](https://img.shields.io/npm/v/awesome-scroll-to.svg?style=flat-square)](https://www.npmjs.com/package/awesome-scroll-to)
 [![npm downloads](https://img.shields.io/npm/dm/awesome-scroll-to.svg?style=flat-square)](https://www.npmjs.com/package/awesome-scroll-to)
 
-Lightweight 659B (GZIPPED) scroll to function. Scrolls your Document or any other DOM element.
-
-## Demo
-
-See the [DEMO](http://testfortest.ru/awesome-scroll-to/)
+Scroll to function with a registry. Scrolls your Document or any other DOM element.
 
 ## Features
 
-* Function as a Promise
-* Types for TypeScript
-* Awesome API
-* No Window scroll
-* Cross Browser
+- Function as a Promise
+- Types for TypeScript
+- Awesome API
+- No Window scroll
+- Cross Browser
 
 ## Usage
 
@@ -35,42 +31,72 @@ import { awesomeScrollTo } from 'awesome-scroll-to';
 // Examples:
 
 // Scroll by document
-awesomeScrollTo(document.documentElement, { offset: { top: 300 } }).then(() => {
-  console.log('Animation scroll is done')
+awesomeScrollTo(
+	{ x: 0, y: 0 },
+	{
+		elementToScroll: document.documentElement,
+		maxDuration: 400,
+	}
+).then(() => {
+	console.log('Animation scroll is done');
 });
 
 // Scroll by container
-awesomeScrollTo(document.querySelector('.scroll-content'), { offset: { top: 200 } });
+awesomeScrollTo(
+	{ x: 0, y: 200 },
+	{
+		elementToScroll: document.querySelector('.scroll-content'),
+		maxDuration: 400,
+	}
+);
 
 // Scroll diagonally
-awesomeScrollTo(document.querySelector('.scroll-content'), { offset: { top: 600, left: 600 } });
+awesomeScrollTo(
+	{ x: 600, y: 600 },
+	{
+		elementToScroll: document.querySelector('.scroll-content'),
+		maxDuration: 400,
+	}
+);
 
 // Scroll to ellement
 const elementPosition = document.querySelector('.block-to-scroll').getBoundingClientRect().top;
-awesomeScrollTo(document.documentElement, {offset: {top: elementPosition}})
-
+awesomeScrollTo(
+	{ x: 0, y: elementPosition },
+	{
+		elementToScroll: document.documentElement,
+		maxDuration: 400,
+	}
+);
 ```
 
 ## Options
 
-```javascript
-const options = {
-	offset: {
-		top?: 0,
-		left?: 0
-	},
-	duration: 600,
-	animation: 'linear'
-}
-```
+| Name               | Type               | Default        | Description                                         |
+| :----------------- | :----------------- | :------------- | :-------------------------------------------------- |
+| cancelOnUserAction | `boolean`          | `true`         | can be use cancelAnimation or preventDefaultHandler |
+| easingFn           | `enum['easingFn']` | easeInOutCubic | Animation styles                                    |
+| elementToScroll    | `HTMLElement`      |                | Element for scroll                                  |
+| horizontalOffset   | `number`           | `0`            | Start point for horizontal offset                   |
+| verticalOffset     | `number`           | `0`            | Start point for vertical offset                     |
+| maxDuration        | `number`           | `0`            | Maximum direction point                             |
+| maxDuration        | `number`           | `0`            | Minimum direction point                             |
+| speed              | `number`           | `500`          | Speed value                                         |
 
 #### Animations
 
+| easingFn  
+| :----------------- |
+| `"linear"` |
+| `"easeInOutCubic"` |
+| `"easeInOutQuad"` |
+| `"easeInOutQuart"` |
+| `"easeInOutQuint"` |
+
 ```javascript
-'linear' | 'easeInOut' | 'easeOut'
+'linear' | 'easeInOutCubic' | 'easeInOutQuad' | 'easeInOutQuart' | 'easeInOutQuint';
 ```
 
 ## Browser support
 
 All modern browsers
-

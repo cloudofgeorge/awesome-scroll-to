@@ -56,7 +56,7 @@ awesomeScrollTo(
 	}
 );
 
-// Scroll to ellement
+// Scroll to element
 const elementPosition = document.querySelector('.block-to-scroll').getBoundingClientRect().top;
 awesomeScrollTo(
 	{ x: 0, y: elementPosition },

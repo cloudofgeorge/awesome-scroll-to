@@ -76,8 +76,8 @@ awesomeScrollTo(
 | elementToScroll    | `HTMLElement`      |                | Element for scroll                                  |
 | horizontalOffset   | `number`           | `0`            | Start point for horizontal offset                   |
 | verticalOffset     | `number`           | `0`            | Start point for vertical offset                     |
-| maxDuration        | `number`           | `0`            | Maximum direction point                             |
-| maxDuration        | `number`           | `0`            | Minimum direction point                             |
+| maxDuration        | `number`           | `0`            | Maximum duration                                     |
+| minDuration        | `number`           | `0`            | Minimum duration                                     |
 | speed              | `number`           | `500`          | Speed value                                         |
 
 #### Animations
